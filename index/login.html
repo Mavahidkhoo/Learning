@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="../css/bootstrap.min.css" />
+        <link rel="stylesheet" href="../css/style.css" />
+        <title>Array</title>
+    </head>
+
+    <body>
+        <div class="container-fluid row">
+            <div class="col-4"></div>
+            <div class="col-4">
+                    <!--username-->
+                    <div class="form-group text-center">
+                        <label for="username">username</label>
+                        <input type="text" class="form-control text-center" id="username" aria-describedby="usernameHelp"
+                            placeholder="Enter your username!">
+                        <small id="usernameHelp2" class="form-text text-danger d-none">The user does not exist</small>
+                        <small id="usernameHelp" class="form-text text-danger d-none">fill the blank</small>
+                    </div>
+                    <!--password-->
+                    <div class="form-group text-center">
+                        <label for="password">password</label>
+                        <input type="password" class="form-control text-center" id="password" aria-describedby="passwordHelp"
+                            placeholder="Enter your password!">
+                        <small id="passwordHelp" class="form-text text-danger d-none">Wrong password</small>
+                    </div>
+                <!--login-->
+                <div class="form-group d-flex justify-content-center">
+                    <input type="button" class="btn-danger px-5 py-1 rounded" id="BtnLogin" value="  Login  ">
+                </div>
+            <div class="col-4"></div>
+           
+    </body>
+    <script src="../js/jquery-3.3.1.slim.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/login.js"></script>
+
+</html>
