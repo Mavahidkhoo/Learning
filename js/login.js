@@ -28,9 +28,7 @@ function login() {
     person = JSON.parse(checkUser);
     if (person.passWord == document.getElementById("password").value) {
       document.getElementById("passwordHelp").classList.add("d-none");
-      setTimeout(() => {
-        alert("Kharam Gayde shooood :-)");
-      }, 100);
+      window.location.replace("../index/profile.html");
     } else {
       document.getElementById("passwordHelp").classList.remove("d-none");
     }
