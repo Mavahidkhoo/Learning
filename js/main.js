@@ -1,8 +1,9 @@
 let myList = [];
 let validationCheck = false;
+let gen;
 document.getElementById("BtnSave").addEventListener("click", arrFunc);
 document.getElementById("BtnShow").addEventListener("click", showFunc);
-document.getElementById("BtnGoLogin").addEventListener("click", function(){
+document.getElementById("BtnGoLogin").addEventListener("click", function () {
   location.href = "../index/login.html";
 });
 
@@ -16,6 +17,7 @@ function arrFunc() {
       Email: "",
       userName: "",
       age: "",
+      gender: "",
       passWord: "",
       PassWordConfirm: "",
     };
@@ -24,6 +26,7 @@ function arrFunc() {
     person.Email = document.getElementById("Mail").value;
     person.userName = document.getElementById("UserName").value;
     person.age = document.getElementById("Age").value;
+    person.gender = gen;
     person.passWord = document.getElementById("Pass").value;
     person.PassWordConfirm = document.getElementById("PassCheck").value;
     myList.push(person);
@@ -33,6 +36,8 @@ function arrFunc() {
     document.getElementById("Mail").value = "";
     document.getElementById("UserName").value = "";
     document.getElementById("Age").value = "";
+    document.getElementById("Male").checked=false;
+    document.getElementById("Female").checked=false;
     document.getElementById("Pass").value = "";
     document.getElementById("PassCheck").value = "";
     validationCheck = false;
@@ -54,6 +59,7 @@ function showFunc() {
      Email: <span class="mr-2 text-primary">${myList[i].Email}</span>
       UserName: <span class="mr-2 text-primary">${myList[i].userName}</span>
       Age: <span class="mr-2 text-primary">${myList[i].age}</span>
+      Gender: <span class="mr-2 text-primary">${myList[i].gender}</span>
       <hr>
       </div>`
     );
@@ -141,6 +147,23 @@ function validation() {
       i++;
     }
   }
+  //Gender Check
+  {
+    var checkgender = document.getElementById("Male");
+    var checkgender2 = document.getElementById("Female");
+
+    if (checkgender.checked) {
+      document.getElementById("GenderHelp").classList.add("d-none");
+      gen = document.getElementById("Male").value;
+      i++;
+    } else if (checkgender2.checked) {
+      document.getElementById("GenderHelp").classList.add("d-none");
+      document.getElementById("Female").value;
+      i++;
+    } else {
+      document.getElementById("GenderHelp").classList.remove("d-none");
+    }
+  }
   //password check
   {
     var passwordCheck = document.getElementById("Pass").value;
@@ -162,7 +185,7 @@ function validation() {
   }
   //check all item
   {
-    if (i == 6) {
+    if (i == 7) {
       validationCheck = true;
     }
   }
