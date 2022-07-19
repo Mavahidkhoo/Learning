@@ -4,16 +4,98 @@
     <head>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="../css/bootstrap.min.css" />
-        <link rel="stylesheet" href="../css/style.css" />
+        <link rel="stylesheet" href="../css/styleProfile.css" />
         <title>Array</title>
     </head>
 
     <body>
         <div class="container">
             <div class="row">
-                <div>
+                <div class="navbar navbar-expand-lg navbar-light bg-light w-100">
+                    <span class="navbar-brand mb-0 h1">Profile</span>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ml-auto flex-row-reverse">
+                            <li class="nav-item">
+                                <a class="nav-link text-primary" href="index.html">Add User<span
+                                        class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <span class="nav-link text-success" id="Edit">Edit</span>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-warning" href="login.html">Login</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
+            <div class="row bg-dark text-white justify-content-center">
+                <div>
+                    <!--First Name-->
+                    <div class="form-group">
+                        <label for="FirstName">First Name</label>
+                        <input type="text" class="form-control" id="FirstName" aria-describedby="FirstNameHelp"
+                            placeholder="Enter your Name!">
+                        <small id="FirstNameHelp" class="form-text text-danger d-none">Just Enter Alphabet</small>
+                    </div>
+                    <!--Last Name-->
+                    <div class="form-group">
+                        <label for="LastName">Last Name</label>
+                        <input type="text" class="form-control" id="LastName" aria-describedby="LastNameHelp"
+                            placeholder="Enter your LastName!">
+                        <small id="LastNameHelp" class="form-text text-danger d-none">Just Enter Alphabet</small>
+                    </div>
+                    <!--Email-->
+                    <div class="form-group">
+                        <label for="Mail">Email address</label>
+                        <input type="email" class="form-control" id="Mail" aria-describedby="MailHelp"
+                            placeholder="Enter email">
+                        <small id="MailHelp" class="form-text text-danger d-none">Enter Right Email</small>
+                    </div>
+                    <!--UserName-->
+                    <div class="form-group">
+                        <label for="UserName">Username</label>
+                        <input type="text" class="form-control" id="UserName" aria-describedby="UserNameHelp"
+                            placeholder="Enter your UserName!">
+                        <small id="UserNameHelp" class="form-text text-danger d-none">Enter Another Username</small>
+                        <small id="UserNameHelp2" class="form-text text-danger d-none">Enter Your Username</small>
+                        
+                    </div>
+                    <!--Age-->
+                    <div class="form-group">
+                        <label for="Age">Age</label>
+                        <input type="text" class="form-control" id="Age" aria-describedby="AgeHelp"
+                            placeholder="Enter your Age!">
+                        <small id="AgeHelp" class="form-text text-danger d-none">Just Enter Number between 10-60</small>
+                    </div>
+                     <!--Gender-->
+                     <div class="form-group mb-0">
+                        <label for="Gender">Gender</label><br>
+                        <input type="radio" id="Male" name="gender" value="Male">
+                        <label class="mr-5" for="Male">Male</label>
+                        <input type="radio" id="Female" name="gender" value="Female">
+                        <label for="Female">Female</label>
+                        <small id="GenderHelp" class="form-text text-danger d-none">select your Gender</small>
+                    </div>
+                    <!--Password-->
+                    <div class="form-group">
+                        <label for="Pass">Password</label>
+                        <input type="password" class="form-control mb-2" id="Pass" placeholder="Password">
+                        <input type="password" class="form-control" id="PassCheck" placeholder="Confirm your Password!">
+                        <small id="passwordHelp" class="form-text text-danger d-none">Not Match Paswword!</small>
+                        <small id="passwordHelp2" class="form-text text-danger d-none">Enter a Paswword!</small>
+                    </div>
+                    <div class="form-group ml-5 pl-3">
+                        <input type="button" class="btn-info mt-3 rounded py-1" id="BtnSave" value="  Save  ">
+                    </div>
+                </div>
+            </div>
+        </div>
         </div>
 
     </body>

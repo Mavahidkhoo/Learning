@@ -2,6 +2,7 @@ document.getElementById("BtnLogin").addEventListener("click", login);
 function login() {
   let checkUser;
   let person;
+  let personlocate;
   let userName = document.getElementById("username").value;
   //check username
   {
@@ -28,7 +29,7 @@ function login() {
     person = JSON.parse(checkUser);
     if (person.passWord == document.getElementById("password").value) {
       document.getElementById("passwordHelp").classList.add("d-none");
-      window.location.replace("../index/profile.html");
+      window.location.replace("../index/profile.html?"+userName);
     } else {
       document.getElementById("passwordHelp").classList.remove("d-none");
     }
