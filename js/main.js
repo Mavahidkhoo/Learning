@@ -158,7 +158,7 @@ function validation() {
       i++;
     } else if (checkgender2.checked) {
       document.getElementById("GenderHelp").classList.add("d-none");
-      document.getElementById("Female").value;
+      gen= document.getElementById("Female").value;
       i++;
     } else {
       document.getElementById("GenderHelp").classList.remove("d-none");
